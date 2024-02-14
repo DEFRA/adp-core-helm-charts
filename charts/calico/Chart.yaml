@@ -1,5 +1,0 @@
-apiVersion: v2
-name: adp-calico-helm-library
-description: ADP Calico Helm Library
-# type: library
-version: 0.0.1

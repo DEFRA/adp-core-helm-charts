@@ -1,5 +1,0 @@
-apiServer:
-  enabled: true
-  namespace: 
-    name: calico-apiserver
-  
