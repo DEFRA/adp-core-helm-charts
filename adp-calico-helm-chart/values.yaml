@@ -1,6 +1,15 @@
 apiServer:
   enabled: false
 
+# networkPolicy:
+#   namespaceName: ""
+
+# networkPolicy:
+#   namespaceName: "cert-manager"
+
+# networkPolicy:
+#   namespaceName: "nginx-ingress"
+
 # apiServer:
 #   enabled: true
 #   namespace: 
