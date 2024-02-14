@@ -1,14 +1,7 @@
 {{ if .Values.apiServer.enabled }} 
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: {{ .Values.apiServer.namespace.name }}
----
-
 apiVersion: operator.tigera.io/v1
 kind: APIServer
 metadata:
-  name: default2
-  name: {{ .Values.apiServer.namespace.name }}
-spec:
+  name: default
+spec: {}
 {{ end }}
