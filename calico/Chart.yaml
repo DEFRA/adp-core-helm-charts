@@ -1,5 +1,4 @@
 apiVersion: v2
-name: adp-calico-helm-library
-description: ADP Calico Helm Library
-# type: library
+name: adp-calico-helm-chart
+description: ADP Calico Helm Chart
 version: 0.0.3

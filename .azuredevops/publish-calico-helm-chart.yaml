@@ -32,5 +32,5 @@ extends:
   template: /pipelines/common-helm-library-git-publish.yaml@DEFRA-ADPPipelineCommon
   parameters:
     helmLibraryName: 'calico'
-    chartRepoPublicUrl: 'https://raw.githubusercontent.com/defra/adp-helm-repository/main/adp-core-helm-charts/calico'
+    chartRepoPublicUrl: 'https://raw.githubusercontent.com/defra-adp-sandpit/adp-helm-repository/main/adp-core-helm-charts/calico'
     publishFromFeature: ${{ parameters.publishFromFeature }}
