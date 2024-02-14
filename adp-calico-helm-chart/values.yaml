@@ -1,16 +1,18 @@
+## APPLY global network policy release ##
 apiServer:
   enabled: false
 
-# networkPolicy:
-#   namespaceName: ""
+networkPolicy:
+  namespaceName: ""
 
+## APPLY cert-manager network policy release ##
 # networkPolicy:
 #   namespaceName: "cert-manager"
 
+## APPLY nginx-ingress network policy release ##
 # networkPolicy:
 #   namespaceName: "nginx-ingress"
 
+## APPLY calico api-server policy release ##
 # apiServer:
 #   enabled: true
-#   namespace: 
-#     name: calico-apiserver3

@@ -1,4 +1,4 @@
-{{ if not .Values.apiServer.enabled }}
+{{ if and (not .Values.apiServer.enabled) (eq .Values.networkPolicy.namespaceName "") }}
 apiVersion: projectcalico.org/v3
 kind: GlobalNetworkPolicy
 metadata:
