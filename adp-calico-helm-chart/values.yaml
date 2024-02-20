@@ -1,5 +1,5 @@
 ## APPLY global network policy release ##
 apiServer:
-  enabled: true
+  enabled: false
 
 aksIlbSubnetRange: ""
