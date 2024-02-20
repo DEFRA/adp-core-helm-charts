@@ -1,6 +1,4 @@
 {{ if not .Values.apiServer.enabled }}
-
-{{ if eq .Values.networkPolicy.namespaceName "cert-manager" }}
 apiVersion: projectcalico.org/v3
 kind: NetworkPolicy
 metadata:
@@ -13,10 +11,8 @@ spec:
   ingress:
   - action: Allow
     protocol: TCP
-{{ end }}
 ---
 
-{{ if eq .Values.networkPolicy.namespaceName "nginx-ingress" }}
 apiVersion: projectcalico.org/v3
 kind: NetworkPolicy
 metadata:
@@ -35,9 +31,7 @@ spec:
         - 443
     source: 
       nets:
-        - 10.178.108.0/27
+        - {{ .Values.aksIlbSubnetRange }} #10.178.108.0/27
   egress:
   - action: Allow
-{{ end }}
-
 {{ end }}
