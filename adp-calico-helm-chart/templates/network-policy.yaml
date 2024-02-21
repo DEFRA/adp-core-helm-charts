@@ -31,7 +31,7 @@ spec:
         - 443
     source: 
       nets:
-        - {{ .Values.aksIlbSubnetRange }} #10.178.108.0/27
+        - {{ .Values.aksIlbSubnetRange }}
   egress:
   - action: Allow
 {{ end }}
