@@ -1,0 +1,37 @@
+{{ if not .Values.apiServer.enabled }}
+apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  name: allow-cert-manager-webhook-ingress
+  namespace: cert-manager
+spec:
+  selector: app == "webhook"
+  types:
+  - Ingress
+  ingress:
+  - action: Allow
+    protocol: TCP
+---
+
+apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  name: allow-nginx-ingress
+  namespace: nginx-ingress
+spec:
+  types:
+  - Ingress
+  - Egress
+  ingress:
+  - action: Allow
+    protocol: TCP
+    destination: 
+      ports:
+        - 80
+        - 443
+    source: 
+      nets:
+        - {{ .Values.aksIlbSubnetRange }}
+  egress:
+  - action: Allow
+{{ end }}

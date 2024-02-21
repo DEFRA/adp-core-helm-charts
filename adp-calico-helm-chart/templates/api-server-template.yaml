@@ -1,0 +1,8 @@
+{{ if .Values.apiServer.enabled }} 
+apiVersion: operator.tigera.io/v1
+kind: APIServer
+metadata:
+  name: default
+spec:
+{{ .Values.apiServer.spec | toYaml | indent 2 }}
+{{ end }}

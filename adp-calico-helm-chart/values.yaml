@@ -1,0 +1,6 @@
+## APPLY global network policy release ##
+apiServer:
+  enabled: false
+  spec: {}
+
+aksIlbSubnetRange: ""
