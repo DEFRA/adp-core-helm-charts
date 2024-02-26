@@ -1,4 +1,4 @@
 apiVersion: v2
 name: adp-calico-helm-chart
 description: ADP Calico Helm Chart
-version: 0.1.0
+version: 0.1.1
