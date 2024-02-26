@@ -2,6 +2,22 @@
 apiVersion: projectcalico.org/v3
 kind: GlobalNetworkPolicy
 metadata:
+  name: allow-ingress-gatekeeper-system
+spec:
+  order: 940
+  types:
+  - Ingress
+  ingress:
+  - action: Allow
+    destination:
+      namespaceSelector: kubernetes.io/metadata.name == 'gatekeeper-system'
+    source: {}
+    protocol: TCP
+---
+
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkPolicy
+metadata:
   name: allow-nginx-ingress-team-namespaces
 spec:
   order: 950
