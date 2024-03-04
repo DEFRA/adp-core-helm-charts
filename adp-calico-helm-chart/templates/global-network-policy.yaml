@@ -116,7 +116,7 @@ spec:
   - action: Allow  
     protocol: TCP
     source: 
-      namespaceSelector: kubernetes.azure.com/managedby == "aks" || kubernetes.io/metadata.name in {"app-config-service" ,"cert-manager", "calico-apiserver"}
+      namespaceSelector: kubernetes.azure.com/managedby == "aks" || kubernetes.io/metadata.name in {"app-config-service" ,"cert-manager","calico-apiserver","flux-config"}
 --- 
 
 # Allow dns-egress
